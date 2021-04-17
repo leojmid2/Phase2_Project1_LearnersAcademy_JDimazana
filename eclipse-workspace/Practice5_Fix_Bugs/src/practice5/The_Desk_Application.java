@@ -100,7 +100,34 @@ public class The_Desk_Application {
 	    
 	    private static void sortExpenses(ArrayList<Integer> arrayList) {
 	        int arrlength =  arrayList.size();
-	        //complete the code
+	        quicksort(arrayList,0,arrlength-1);
+	        System.out.println(arrayList.toString()+"\n");
 	    }
+	    
+	    
+		public static void quicksort(ArrayList<Integer> data, int start, int end) {
+			if (start < end) {
+				int pivot = partition(data, start, end);
+				quicksort(data, start, pivot-1);
+				quicksort(data, pivot+1, end);
+			}
+		}
+		
+		private static int partition(ArrayList<Integer> data, int start, int end) {
+			int pivot = data.get(end);
+			int i = start;
+			for (int j = start; j <= end - 1; j++) {
+				if (data.get(j) < pivot) {
+					int tmp = data.get(i);
+					data.set(i, data.get(j));
+					data.set(j,tmp);
+					i++;
+				}
+			}
+			data.set(end, data.get(i));
+			data.set(i, pivot);
+			return i;
+		}
+
 
 }

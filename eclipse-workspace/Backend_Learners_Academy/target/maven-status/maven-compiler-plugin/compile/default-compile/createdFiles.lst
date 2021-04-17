@@ -1,0 +1,8 @@
+com/learnersacademy/model/Teacher.class
+com/learnersacademy/model/Classi.class
+com/learnersacademy/model/Subject.class
+com/learnersacademy/controller/TeacherController.class
+com/learnersacademy/model/Student.class
+com/learnersacademy/controller/ClassController.class
+com/learnersacademy/controller/SubjectController.class
+com/learnersacademy/controller/StudentController.class
